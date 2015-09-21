@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="testdb7872" type="DataService" springFile="testdb7872.spring.xml">
+    <operation operationType="nativequery" name="testquery1">
+        <return typeRef="testdb7872testquery1rtnType" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="com.testdbproject1.testdb7872.Table2">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="testName" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="testColumn3" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testdbproject1.testdb7872.Table1">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="column2" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="column3" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="testdb7872testquery1rtnType">
+            <element name="test_name" typeRef="java.lang.String"/>
+            <element name="ID" typeRef="java.lang.Integer"/>
+            <element name="TestCOLUMN_3" typeRef="java.lang.Integer"/>
+        </dataobject>
+    </dataobjects>
+</service>

@@ -1,0 +1,1 @@
+{"name":"testdb7872","description":"Queries for testdb7872","queries":[{"name":"testquery1","query":"select * from TABLE2","comment":"","description":null,"nativeSql":true,"returnsSingleResult":false,"update":false,"queryParams":[],"outputType":null}]}

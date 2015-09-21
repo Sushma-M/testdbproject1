@@ -1,11 +1,40 @@
-<wm-page data-ng-controller="MainPageController" name="mainpage">
-    <wm-header content="header" name="header" height="auto"></wm-header>
-    <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
-    <wm-content name="content">
-        <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+<wm-page data-ng-controller="MainPageController" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-livegrid name="Table2Livegrid3" service="testdb7872@Table2">
+                <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="Table2Grid3" dataset="bind:Variables.Testdb7872Table2Data.dataSet">
+                    <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="testName" caption="Test Name" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="testColumn3" caption="Test Column3" type="integer" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-action key="addNewRow" label="New" value="new" icon="new" show="true" class="btn-primary" action="addNewRow()"></wm-grid-action>
+                </wm-grid>
+                <wm-liveform novalidate="false" title="Details" name="Table2Liveform3" dataset="bind:Variables.Testdb7872Table2Data.dataSet" formtype="inline">
+                    <wm-layoutgrid name="layoutgrid1">
+                        <wm-gridrow show="hide" name="gridrow1">
+                            <wm-gridcolumn show="show" name="gridcolumn1" columnwidth="12">
+                                <wm-form-field display-name="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" is-related="false" readonly="true" required="true"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow show="show" name="gridrow2">
+                            <wm-gridcolumn show="show" name="gridcolumn2" columnwidth="12">
+                                <wm-form-field display-name="Test Name" show="true" primary-key="false" generator="null" key="testName" type="string" maxvalue="255" is-related="false" readonly="false" required="false"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow show="show" name="gridrow3">
+                            <wm-gridcolumn show="show" name="gridcolumn3" columnwidth="12">
+                                <wm-form-field display-name="Test Column3" show="true" primary-key="false" generator="null" key="testColumn3" type="integer" is-related="false" readonly="false" required="false" default-value="0"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="glyphicon glyphicon-remove-circle" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" class="form-save btn-success" iconclass="glyphicon glyphicon-save" display-name="Save" show="true" type="Submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livegrid>
+            <wm-grid readonlygrid="true" name="grid4" dataset="bind:Variables.Testdb7872Testquery1.dataSet">
+                <wm-grid-column binding="test_name" caption="Test_name" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                <wm-grid-column binding="ID" caption="ID" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                <wm-grid-column binding="TestCOLUMN_3" caption="Test C O L U M N_3" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+            </wm-grid>
         </wm-page-content>
-        <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
-    <wm-footer name="footer" content="footer"></wm-footer>
 </wm-page>
