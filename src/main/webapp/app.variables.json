@@ -225,7 +225,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -388,7 +388,8 @@
 			"entityName": "Department",
 			"fullyQualifiedName": "com.hrdb.Department",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 2
 	},
 	"HrdbEmployeeData": {
 		"type": "Employee",
